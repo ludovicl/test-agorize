@@ -1,0 +1,30 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Points</th>
+    <th scope="col">Users count</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @skills_points.each do |skills_point| %>
+    <tr>
+      <td> <%= skills_point[:name] %></td>
+      <td> <%= skills_point[:points] %></td>
+      <td> <%= skills_point[:users_count] %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<div class="row">
+  <div class="col-sm">
+    <%= button_to "View users", users_path, :class => "btn btn-outline-primary btn-sm", method: :get%>
+  </div>
+  <div class="col-sm">
+    <%= button_to "View associations users, skills", skills_users_path, :class => "btn btn-outline-primary btn-sm", method: :get%>
+  </div>
+  <div class="col-sm">
+    <%= button_to "View skills", skills_path, :class => "btn btn-outline-primary btn-sm", method: :get%>
+  </div>
+</div>
