@@ -7,6 +7,7 @@
 
 Par exemple, dans cette table, l'enregistrement avec l'id 3 est un enfant de l'enregistrement ayant l'id 1, idem pour l'enregistrement 5 :
 
+~~~
 SKILLS
 +-----------------------+
 |ID|NAME      |PARENT_ID|
@@ -21,7 +22,9 @@ SKILLS
 +-----------------------+
 |5 |Socker    |1        |
 +-----------------------+
+~~~
 
+~~~
 SKILLS_USERS
 +-------------------+
 |ID|SKILL_ID|USER_ID|
@@ -36,7 +39,9 @@ SKILLS_USERS
 +-------------------+
 |5 |5       |5      |
 +-------------------+
+~~~
 
+~~~
 USERS
 +---------+
 |ID|POINTS|
@@ -51,9 +56,10 @@ USERS
 +---------+
 |5 |10    |
 +---------+
+~~~
 
 Résultat attendu (en une requête qu'il faudra nous fournir) :
-
+~~~
 +--------------------------------+
 |ID|NAME      |POINTS|USERS_COUNT|
 +--------------------------------+
@@ -61,6 +67,7 @@ Résultat attendu (en une requête qu'il faudra nous fournir) :
 +--------------------------------+
 |2 |Basketball|50    |1          |
 +--------------------------------+
+~~~
 
 ## Réponse : 
 ~~~sql
